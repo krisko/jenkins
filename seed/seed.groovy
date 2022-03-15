@@ -16,6 +16,6 @@ job("${SEED_PROJECT}-${SEED_BRANCH}-build") {
       }
    }
    steps {
-      shell "Look! Im building ${BRANCH}!"
+      shell 'echo "Look! Im building ${BRANCH}!"'
    }
 }
