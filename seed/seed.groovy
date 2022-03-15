@@ -1,7 +1,7 @@
 job("${SEED_PROJECT}-${SEED_BRANCH}-build") {
    description "Building the ${BRANCH} branch."
    parameters {
-      stringParam('COMMIT', 'HEAD', 'Commit to build')
+      stringParam('COMMIT', 'main', 'Commit to build')
    }
    scm {
       git {
