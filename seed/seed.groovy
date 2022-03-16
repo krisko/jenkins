@@ -16,6 +16,7 @@ job("${SEED_PROJECT}-${SEED_BRANCH}-build") {
       }
    }
    steps {
-      shell 'echo "Look! Im building ${BRANCH}!"'
+      shell 'echo "Look! Im building ${COMMIT}!"'
    }
+   queue "${SEED_PROJECT}-${SEED_BRANCH}-build"
 }
