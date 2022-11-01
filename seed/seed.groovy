@@ -6,7 +6,7 @@ job("${SEED_PROJECT}-${SEED_BRANCH}-build") {
    scm {
       git {
          remote {
-             url PROJECT_SCM_URL
+             url 'https://github.com/${SEED_PROJECT}'
              branch '${SEED_BRANCH}'
          }
          extensions {
