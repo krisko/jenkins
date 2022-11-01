@@ -1,22 +1,22 @@
 job("${SEED_PROJECT}-${SEED_BRANCH}-build") {
-   description "Building the ${BRANCH} branch."
+   description "Building the ${SEED_BRANCH} branch."
    parameters {
-      stringParam('BRANCH', 'main', 'BRANCH to build')
+      stringParam('SEED_BRANCH', 'main', 'BRANCH to build')
    }
    scm {
       git {
          remote {
              url PROJECT_SCM_URL
-             branch '${BRANCH}'
+             branch '${SEED_BRANCH}'
          }
          extensions {
              wipeOutWorkspace()
-             localBranch BRANCH
+             localBranch SEED_BRANCH
          }
       }
    }
    steps {
-      shell 'echo "Look! Im building ${BRANCH}!"'
+      shell 'echo "Look! Im building ${SEED_BRANCH}!"'
    }
    queue "${SEED_PROJECT}-${SEED_BRANCH}-build"
 }
