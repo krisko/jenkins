@@ -6,8 +6,8 @@ job("${SEED_PROJECT}-${SEED_BRANCH}-build".replaceAll('/','-')) {
    scm {
       git {
          remote {
-             url 'https://github.com/${SEED_PROJECT}'
-             branch '${SEED_BRANCH}'
+             url "https://github.com/${SEED_PROJECT}"
+             branch "${SEED_BRANCH}"
          }
          extensions {
              wipeOutWorkspace()
