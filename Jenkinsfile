@@ -3,12 +3,8 @@ pipeline {
   stages {
     stage('First') {
       steps {
-        sh '''
-          set -x
-          echo "starting at $(date)"
+          echo "First step running..."
           sleep 5
-          ls -la
-        '''
       }
     }
     stage('Second') {

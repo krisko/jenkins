@@ -20,7 +20,7 @@ pipelineJob("${SEED_PROJECT}-${SEED_BRANCH}-build".replaceAll('/','-')) {
                }
             }
          }
-         scriptPath('fgh/Jenkinsfile')
+         scriptPath('Jenkinsfile')
       }
    }
    queue "${SEED_PROJECT}-${SEED_BRANCH}-build".replaceAll('/','-')
