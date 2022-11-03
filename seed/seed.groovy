@@ -17,7 +17,7 @@ pipelineJob("${SEED_PROJECT}-${SEED_BRANCH}-build".replaceAll('/','-')) {
                   url "https://github.com/${SEED_PROJECT}"
                }
                //branches("${SEED_BRANCH}")
-               extensions { )
+               extensions { }
             }
          }
          scriptPath('Jenkinsfile')
