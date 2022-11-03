@@ -10,17 +10,8 @@ pipelineJob("${SEED_PROJECT}-${SEED_BRANCH}-build".replaceAll('/','-')) {
       numToKeep(5)
    }
    definition {
-      cpsScm {
-         scm {
-            git {
-               remote {
-                  url "https://github.com/${SEED_PROJECT}"
-               }
-               //branches("${SEED_BRANCH}")
-               extensions { }
-            }
-         }
-         scriptPath('Jenkinsfile')
+      cps {
+         script(readFileFromWorkspace('Jenkinsfile'))
       }
    }
    queue "${SEED_PROJECT}-${SEED_BRANCH}-build".replaceAll('/','-')
