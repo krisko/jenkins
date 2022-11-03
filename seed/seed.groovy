@@ -14,7 +14,7 @@ pipelineJob("${SEED_PROJECT}-${SEED_BRANCH}-build".replaceAll('/','-')) {
          scm {
             git {
                remote {
-                  url("${PROJECT_SCM_URL")
+                  url("${PROJECT_SCM_URL}")
                }
                //branches("${SEED_BRANCH}")
                extensions { }
