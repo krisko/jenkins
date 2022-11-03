@@ -3,6 +3,9 @@ pipelineJob("${SEED_PROJECT}-${SEED_BRANCH}-build".replaceAll('/','-')) {
    parameters {
       stringParam('SEED_BRANCH', 'main', 'BRANCH to build')
    }
+   triggers {
+      scm('')
+   }
    definition {
       cpsScm {
          scm {
