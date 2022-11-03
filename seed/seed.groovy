@@ -16,8 +16,8 @@ job("${SEED_PROJECT}-${SEED_BRANCH}-build".replaceAll('/','-')) {
       }
    }
    scriptPath('Jenkinsfile')
-   #steps {
-   #   shell 'echo "Look! Im building ${SEED_BRANCH}!"'
-   #}
+   //steps {
+   //   shell 'echo "Look! Im building ${SEED_BRANCH}!"'
+   //}
    queue "${SEED_PROJECT}-${SEED_BRANCH}-build".replaceAll('/','-')
 }
