@@ -3,7 +3,7 @@ pipelineJob("${SEED_PROJECT}-${SEED_BRANCH}-build".replaceAll('/','-')) {
    parameters {
       stringParam('SEED_BRANCH', 'main', 'BRANCH to build')
    }
-   definitions {
+   definition {
       cpsScm {
          scm {
             git {
