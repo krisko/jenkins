@@ -11,7 +11,6 @@ pipelineJob("${SEED_PROJECT}-${SEED_BRANCH}-build".replaceAll('/','-')) {
    }
    definition {
       cpsScm {
-         lightweight(true)
          scm {
             git {
                remote {
